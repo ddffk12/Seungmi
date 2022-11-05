@@ -1,0 +1,70 @@
+@import url(./common.css);
+@import "_mixin.scss";
+@import url('https://fonts.googleapis.com/css2?family=Poor+Story&display=swap');
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999999999999999999;
+    .head {
+        padding: 0 16px;
+        @include flex;
+        h1 {
+            font-size: 40px;
+            font-family: 'Poor Story', cursive;
+            color: #50bcdf
+        }
+        ul {
+            @include flex;
+            li {
+                font-size: 25px;
+                font-family: 'Poor Story', cursive;
+                margin: 0 10px;
+                position: relative;
+                &:hover {
+                    ul {
+                        opacity: 1;
+                        transform: translateY(0%);
+                    }
+                }
+                a {
+                    color: greenyellow;
+                }
+                ul {
+                    display: block;
+                    position: absolute;
+                    opacity: 0;
+                    transform: translateY(-10%);
+                    transition: 0.5s;
+                    li {
+                        width: 120%;
+                        padding-top: 10px;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+main {
+    position: relative;
+    .first {
+        .swiper-wrapper {
+            .swiper-slide {
+                width: 100%;
+                height: 100%;
+                img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .swiper-pagination {
+
+        }
+    }
+}

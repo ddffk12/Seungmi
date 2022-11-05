@@ -1,0 +1,6 @@
+@mixin flex($n1:space-between, $n2:center) {
+    display: flex;
+    justify-content: $n1;
+    align-items: $n2;
+    @content;
+}
